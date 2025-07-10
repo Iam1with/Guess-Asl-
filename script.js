@@ -29,7 +29,8 @@ function loadGame() {
 
   const correctFirst = Math.random() < 0.5;
 
-  document.getElementById("sign-image").src = `test_images/${images[correctIndex]}`;
+  // ✅ Use relative path from root folder
+  document.getElementById("sign-image").src = `${images[correctIndex]}`;
   document.getElementById("option1").innerText = correctFirst ? correctAnswer : wrongAnswer;
   document.getElementById("option2").innerText = correctFirst ? wrongAnswer : correctAnswer;
 
